@@ -14,6 +14,9 @@
 		A2968BCC2779D3E3007616CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2968BCB2779D3E3007616CC /* Assets.xcassets */; };
 		A2968BCF2779D3E3007616CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2968BCD2779D3E3007616CC /* LaunchScreen.storyboard */; };
 		A2968BD72779D4B0007616CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2968BD62779D4B0007616CC /* NetworkManager.swift */; };
+		A2968BD92779E817007616CC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2968BD82779E817007616CC /* Post.swift */; };
+		A2968BDC2779E89B007616CC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2968BDB2779E89B007616CC /* Album.swift */; };
+		A2968BDE2779E8E4007616CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2968BDD2779E8E4007616CC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		A2968BCE2779D3E3007616CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2968BD02779D3E3007616CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2968BD62779D4B0007616CC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A2968BD82779E817007616CC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A2968BDB2779E89B007616CC /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		A2968BDD2779E8E4007616CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			children = (
 				A2968BC22779D3E2007616CC /* AppDelegate.swift */,
 				A2968BC42779D3E2007616CC /* SceneDelegate.swift */,
+				A2968BDA2779E81B007616CC /* Models */,
 				A2968BD62779D4B0007616CC /* NetworkManager.swift */,
 				A2968BC62779D3E2007616CC /* ViewController.swift */,
 				A2968BC82779D3E2007616CC /* Main.storyboard */,
@@ -68,6 +75,16 @@
 				A2968BD02779D3E3007616CC /* Info.plist */,
 			);
 			path = URLSessionExample2;
+			sourceTree = "<group>";
+		};
+		A2968BDA2779E81B007616CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2968BD82779E817007616CC /* Post.swift */,
+				A2968BDB2779E89B007616CC /* Album.swift */,
+				A2968BDD2779E8E4007616CC /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +162,9 @@
 				A2968BC72779D3E2007616CC /* ViewController.swift in Sources */,
 				A2968BC32779D3E2007616CC /* AppDelegate.swift in Sources */,
 				A2968BC52779D3E2007616CC /* SceneDelegate.swift in Sources */,
+				A2968BD92779E817007616CC /* Post.swift in Sources */,
+				A2968BDC2779E89B007616CC /* Album.swift in Sources */,
+				A2968BDE2779E8E4007616CC /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
