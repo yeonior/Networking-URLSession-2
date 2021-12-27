@@ -13,6 +13,7 @@
 		A2968BCA2779D3E2007616CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2968BC82779D3E2007616CC /* Main.storyboard */; };
 		A2968BCC2779D3E3007616CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2968BCB2779D3E3007616CC /* Assets.xcassets */; };
 		A2968BCF2779D3E3007616CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2968BCD2779D3E3007616CC /* LaunchScreen.storyboard */; };
+		A2968BD72779D4B0007616CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2968BD62779D4B0007616CC /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A2968BCB2779D3E3007616CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2968BCE2779D3E3007616CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2968BD02779D3E3007616CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2968BD62779D4B0007616CC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				A2968BC22779D3E2007616CC /* AppDelegate.swift */,
 				A2968BC42779D3E2007616CC /* SceneDelegate.swift */,
+				A2968BD62779D4B0007616CC /* NetworkManager.swift */,
 				A2968BC62779D3E2007616CC /* ViewController.swift */,
 				A2968BC82779D3E2007616CC /* Main.storyboard */,
 				A2968BCB2779D3E3007616CC /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2968BD72779D4B0007616CC /* NetworkManager.swift in Sources */,
 				A2968BC72779D3E2007616CC /* ViewController.swift in Sources */,
 				A2968BC32779D3E2007616CC /* AppDelegate.swift in Sources */,
 				A2968BC52779D3E2007616CC /* SceneDelegate.swift in Sources */,
@@ -306,7 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
