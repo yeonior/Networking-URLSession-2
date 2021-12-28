@@ -59,3 +59,120 @@ enum ApiType {
         }
     }
 }
+
+final class NetworkManager {
+    
+    static let shared = NetworkManager()
+    private let session = URLSession.shared
+    private let decoder = JSONDecoder()
+    
+    // MARK: Different GET functions
+    
+    public func getPosts(completion: @escaping (Posts) -> Void) {
+        
+        let request = ApiType.posts.request
+        let dataTask = session.dataTask(with: request) { [weak self] data, response, error in
+            
+            var result: Posts
+            
+            defer {
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+            
+            guard let self = self else { return result = [] }
+            
+            if let data = data, error == nil {
+                
+                do {
+                    let elements = try self.decoder.decode(Posts.self, from: data)
+                    result = elements
+                } catch let error {
+                    result = []
+                    print(error.localizedDescription)
+                }
+                
+            } else if let error = error {
+                result = []
+                print(error.localizedDescription)
+            } else {
+                result = []
+                print("Something went wrong!")
+            }
+        }
+        dataTask.resume()
+    }
+    
+    public func getAlbums(completion: @escaping (Albums) -> Void) {
+        
+        let request = ApiType.albums.request
+        let dataTask = session.dataTask(with: request) { [weak self] data, response, error in
+            
+            var result: Albums
+            
+            defer {
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+            
+            guard let self = self else { return result = [] }
+            
+            if let data = data, error == nil {
+                
+                do {
+                    let elements = try self.decoder.decode(Albums.self, from: data)
+                    result = elements
+                } catch let error {
+                    result = []
+                    print(error.localizedDescription)
+                }
+                
+            } else if let error = error {
+                result = []
+                print(error.localizedDescription)
+            } else {
+                result = []
+                print("Something went wrong!")
+            }
+        }
+        dataTask.resume()
+    }
+    
+    public func getUsers(completion: @escaping (Users) -> Void) {
+        
+        let request = ApiType.users.request
+        let dataTask = session.dataTask(with: request) { [weak self] data, response, error in
+            
+            var result: Users
+            
+            defer {
+                DispatchQueue.main.async {
+                    completion(result)
+                }
+            }
+            
+            guard let self = self else { return result = [] }
+            
+            if let data = data, error == nil {
+                
+                do {
+                    let elements = try self.decoder.decode(Users.self, from: data)
+                    result = elements
+                } catch let error {
+                    result = []
+                    print(error.localizedDescription)
+                }
+                
+            } else if let error = error {
+                result = []
+                print(error.localizedDescription)
+            } else {
+                result = []
+                print("Something went wrong!")
+            }
+        }
+        dataTask.resume()
+    }
+}

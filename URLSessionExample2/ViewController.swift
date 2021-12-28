@@ -11,9 +11,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        NetworkManager.shared.getPosts { posts in
+            print(posts.count)
+        }
+        
+        NetworkManager.shared.getAlbums { albums in
+            print(albums.count)
+        }
+        
+        NetworkManager.shared.getUsers { users in
+            print(users.count)
+        }
     }
-
-
 }
 
